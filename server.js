@@ -19,7 +19,9 @@ const app = express();
 //     // res.send('<h1>About</h1>')
 //     res.sendFile(path.join(dirname,'public','about.html'))
 // })
-
+// body parser middleware
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 // routes
 app.use('/api/posts',posts);
 
