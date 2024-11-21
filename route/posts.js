@@ -47,7 +47,7 @@ router.patch('/:id',(req,res)=>{
     if(!post){
         return res.status(404).json({msg:'no post found'})
     }
-    post.title=req.body.title;
+    post.title=req.body.title
     res.status(200).json(posts)
 })
 export default router
